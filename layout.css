@@ -1,0 +1,137 @@
+@charset "utf-8";
+/*
+Template Name: Preevent
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Layout CSS
+*/
+
+@import url("fontawesome-4.6.3.min.css");
+@import url("framework.css");
+
+
+/* colors ---------------------------------------------------------------------------------------*/
+:root{
+--mainBlue: rgb(30, 120, 255);
+}
+
+/* Rows
+--------------------------------------------------------------------------------------------------------------- */
+.row0, .row0 a{}
+.row1, .row1 a{}
+
+
+
+/* Header
+--------------------------------------------------------------------------------------------------------------- */
+#header{}
+
+#header #logo{margin:30px 0 0 0;}
+#header #logo h1{margin:0; padding:0; font-weight: bold; font-size:24px; text-transform:uppercase; color: var(--mainBlue); text-decoration: underline;}
+
+
+
+/* Transition Fade
+--------------------------------------------------------------------------------------------------------------- */
+*, *::before, *::after{transition:all .3s ease-in-out;}
+#mainav form *{transition:none !important;}
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul, nav ol{margin:0; padding:0; list-style:none;}
+
+
+/* Top Navigation */
+#mainav{}
+#mainav ul{text-transform:uppercase;}
+#mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none;}
+#mainav ul ul ul{left:180px; top:0;}
+#mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%; margin:0;}
+#mainav li a{display:block; padding:30px 0;}
+#mainav li li a{border:solid; border-width:0 0 1px 0;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after{top:35px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{visibility:hidden; opacity:0;}
+#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+
+/* Cards Layout --------------------------------------------------------------------------------------------------*/
+.card-container { display: grid; padding: 1rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); grid-gap: 1rem;}
+.card { background: #FFFFFF; border-radius: 20px; border: solid 1px var(--mainBlue)}
+.card .button {align-self: end;}
+.card__title{text-align: center; border-bottom: 2px solid var(--mainBlue); height: 85px;}
+.card__title img{ height:80px; width: 20%;}
+.card__table{text-align: center; margin-top: 0; padding-top: 0;}
+
+table {border-collapse: collapse;width: 100%;}
+th, td {padding: 8px;text-align: left;border-bottom: 1px solid var(--mainBlue);}
+
+
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+body{ background:url(https://cdn.pixabay.com/photo/2017/12/27/14/10/stadium-3042771__340.jpg) no-repeat center center fixed; background-size: cover;}
+
+
+/* Rows */
+.row1{color:#FFFFFF; background-color:rgba(255, 255, 255, 0.753);}
+
+/* Top Bar */
+#topbar, #topbar ul li{border-color:rgba(255,255,255,.3);}
+#topbar > div:last-of-type li:first-child a{color:#C0AB8F;}
+
+
+/* Header */
+#header #logo a{color:inherit;}
+
+
+/* Navigation */
+#mainav li a{color:var(--mainBlue);}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:rgb(1, 204, 255); background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:var(--mainBlue); border-color:rgba(0,0,0,.6);}
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:978px){
+	.hoc{max-width:978px;}
+}
+
+
+/* Mobile Devices
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:900px){
+	.hoc{max-width:90%;}
+
+	#header{padding:30px 0;}
+	#header #logo{margin-top:3px;}
+
+	#mainav{}
+	#mainav ul{display:none;}
+	#mainav form{display:block;}
+}
+
+@media screen and (max-width:750px){
+	.fl_left, .fl_right{display:block; float:none;}
+
+	#header{text-align:center;}
+	#header #logo{margin:0 0 15px 0;}
+
+}
