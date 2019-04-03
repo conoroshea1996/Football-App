@@ -100,7 +100,8 @@ body{ background:url(https://cdn.pixabay.com/photo/2017/12/27/14/10/stadium-3042
 
 /* Navigation */
 #mainav li a{color:var(--mainBlue);}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:rgb(1, 204, 255); background-color:inherit;}
+#mainav .active a, #mainav a:hover{color:rgb(1, 204, 255); background-color:inherit;}
+.league:hover{ background: rgba(26, 44, 146, 0.781);}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:var(--mainBlue); border-color:rgba(0,0,0,.6);}
 
 /* Media Queries
